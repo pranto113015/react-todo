@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Addtodo = () => {
+const Addtodo = ({ onAddTodo }) => {
   const [title, setTitle] = useState("");
 
   return (
@@ -11,7 +11,14 @@ const Addtodo = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button>Add</button>
+      <button
+        onClick={() => {
+          onAddTodo(title);
+          setTitle("");
+        }}
+      >
+        Add
+      </button>
     </>
   );
 };

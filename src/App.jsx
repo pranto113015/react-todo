@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <h1>React Todo App</h1>
-      <Addtodo />
+      <Addtodo onAddTodo={handleAddTodo} />
       <Todolist
         todos={todos}
         onChangeTodo={handleChangeTodo}
