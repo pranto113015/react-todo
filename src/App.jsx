@@ -3,7 +3,7 @@ import "./App.css";
 import Addtodo from "./components/Addtodo";
 import Todolist from "./components/Todolist";
 import initialTodos from "./data/initialtodos";
-import getNextTodoIds from "./utils/getNextTodoids";
+import getNextTodoIds from "./utils/getNextTodoIds.js";
 
 function App() {
   const [todos, setTodos] = useState(initialTodos);
